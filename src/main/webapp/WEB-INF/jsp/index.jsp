@@ -4,6 +4,7 @@
     Author     : Oksana_Moroz
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -22,6 +23,10 @@
         <p>
             Simple values can be rendered as so \${} i.e. here's the value from the controller: <blockquote>${hello}</blockquote>
         </p>
+        
+        <c:forEach var="performance" items="${performances}">
+            <c:out value="${performance.title}"/>
+        </c:forEach>
 
     </body>
 </html>

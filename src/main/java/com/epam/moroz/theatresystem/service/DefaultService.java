@@ -6,6 +6,10 @@
 
 package com.epam.moroz.theatresystem.service;
 
+import com.epam.moroz.theatresystem.dao.DefaultDao;
+import com.epam.moroz.theatresystem.model.Performance;
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -15,4 +19,18 @@ import org.springframework.stereotype.Service;
 @Service
 public class DefaultService {
     
+    @Autowired
+    private DefaultDao defaultDao;
+    
+    public List<Performance> findAll() {
+        return defaultDao.findAll();
+    }
+
+    public DefaultDao getDefaultDao() {
+        return defaultDao;
+    }
+
+    public void setDefaultDao(DefaultDao defaultDao) {
+        this.defaultDao = defaultDao;
+    }    
 }

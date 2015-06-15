@@ -19,17 +19,18 @@ import org.springframework.web.servlet.ModelAndView;
  */
 @Controller
 public class DefaultController {
-
+    
     @Autowired
     private DefaultService defaultService;
     
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public ModelAndView index() {
-        ModelAndView mav = new ModelAndView("index");        
+        ModelAndView mav = new ModelAndView("index");
+        mav.addObject("hello", "Hello Oksana!!!");
         mav.addObject("performances", defaultService.findAll());
         return mav;
     }
-    
+        
     public DefaultService getDefaultService() {
         return defaultService;
     }
@@ -37,5 +38,4 @@ public class DefaultController {
     public void setDefaultService(DefaultService defaultService) {
         this.defaultService = defaultService;
     }
-    
 }

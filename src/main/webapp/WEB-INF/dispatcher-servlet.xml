@@ -16,6 +16,7 @@
 
     <context:component-scan base-package="com.epam.moroz.theatresystem.controllers,
             com.epam.moroz.theatresystem.service, com.epam.moroz.theatresystem.dao"/>
+
     <mvc:annotation-driven/>
     
     <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean">
@@ -36,6 +37,5 @@
                   value="org.springframework.web.servlet.view.JstlView" />
         <property name="prefix" value="/WEB-INF/jsp/" />
         <property name="suffix" value=".jsp" />
-    </bean>   
-
+    </bean>  
 </beans>

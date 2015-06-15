@@ -15,7 +15,8 @@
         http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 
     <context:component-scan base-package="com.epam.moroz.theatresystem.controllers,
-            com.epam.moroz.theatresystem.service, com.epam.moroz.theatresystem.dao"/>
+            com.epam.moroz.theatresystem.service, com.epam.moroz.theatresystem.dao_interfaces,
+            com.epam.moroz.theatresystem.dao"/>
 
     <mvc:annotation-driven/>
     

@@ -11,14 +11,14 @@ import com.epam.moroz.theatresystem.model.User;
 import com.epam.moroz.theatresystem.model.Worker;
 import java.util.Arrays;
 import java.util.List;
-import javax.ejb.Stateless;
 import javax.persistence.TypedQuery;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author Oksana_Moroz
  */
-@Stateless
+@Repository
 public class JpaWorkerDAO extends JpaGenericDAO<Worker> implements WorkerDAO {
 
     public JpaWorkerDAO() {

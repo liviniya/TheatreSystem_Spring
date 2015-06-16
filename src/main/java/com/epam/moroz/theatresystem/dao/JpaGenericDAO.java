@@ -6,7 +6,6 @@
 
 package com.epam.moroz.theatresystem.dao;
 
-import com.epam.moroz.theatresystem.model.Performance;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -17,7 +16,6 @@ import org.springframework.stereotype.Repository;
  *
  * @author Oksana_Moroz
  */
-@Repository
 public class JpaGenericDAO<T> {
     
     @PersistenceContext
@@ -25,7 +23,7 @@ public class JpaGenericDAO<T> {
 
     private final Class<T> entityClass;
 
-    protected JpaGenericDAO(Class<T> entityClass) {
+    public JpaGenericDAO(Class<T> entityClass) {
         this.entityClass = entityClass;
     }
 
